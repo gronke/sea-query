@@ -826,6 +826,7 @@ pub mod table;
 pub mod token;
 pub mod types;
 pub mod value;
+pub mod if_else;
 
 #[doc(hidden)]
 #[cfg(feature = "tests-cfg")]
@@ -843,6 +844,7 @@ pub use table::*;
 pub use token::*;
 pub use types::*;
 pub use value::*;
+pub use if_else::*;
 
 #[cfg(feature = "derive")]
 pub use sea_query_derive::{enum_def, Iden, IdenStatic};
