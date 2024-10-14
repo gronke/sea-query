@@ -5,6 +5,7 @@ mod index;
 mod query;
 mod table;
 mod types;
+mod if_else;
 
 #[path = "../common.rs"]
 mod common;

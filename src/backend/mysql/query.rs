@@ -147,6 +147,12 @@ impl QueryBuilder for MysqlQueryBuilder {
     fn insert_default_keyword(&self) -> &str {
         "()"
     }
+
+    /// Prefix of the ELSEIF (MySQL)
+    fn elseif_keyword_prefix(&self) -> &str {
+        "ELSE"
+    }
+
 }
 
 impl MysqlQueryBuilder {
