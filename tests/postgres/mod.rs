@@ -1,5 +1,6 @@
 use sea_query::{tests_cfg::*, *};
 
+mod exception;
 mod foreign_key;
 mod if_else;
 mod index;
