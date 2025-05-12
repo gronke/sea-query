@@ -79,6 +79,9 @@ impl TableBuilder for MysqlQueryBuilder {
                 },
                 ColumnType::Json => "json".into(),
                 ColumnType::JsonBinary => "json".into(),
+                #[cfg(feature="mariadb")]
+                ColumnType::Uuid => "uuid".into(),
+                #[cfg(not(feature="mariadb"))]
                 ColumnType::Uuid => "binary(16)".into(),
                 ColumnType::Custom(iden) => iden.to_string(),
                 ColumnType::Enum { variants, .. } => format!(
