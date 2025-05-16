@@ -2112,6 +2112,15 @@ mod tests {
     }
 
     #[test]
+    #[cfg(feature = "with-uuid")]
+    fn test_generic_uuid_value() {
+        let uuid = ::uuid::Uuid::parse_str("936DA01F9ABD4d9d80C702AF85C822A8").unwrap();
+        let value: Value = uuid.into();
+        let out: Uuid = value.unwrap();
+        assert_eq!(out.to_string(), uuid.to_string());
+    }
+
+    #[test]
     #[cfg(feature = "with-rust_decimal")]
     fn test_decimal_value() {
         use std::str::FromStr;
